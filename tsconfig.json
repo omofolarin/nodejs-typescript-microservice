@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "config/*": ["src/config/*"],
+      "public/*": ["src/public/"],
+      "utilities/*": ["src/utilities/*"],
+      "service-modules/*": ["src/modules/*"],
+      "helpers/*": ["src/helpers/*"],
+      "*": ["node_modules/*", "src/types/*"]
+    }
+  },
+  "include": ["src/"]
+}
