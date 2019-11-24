@@ -1,0 +1,22 @@
+oms: 1
+info:
+  version: 1.0.0
+  title: micoserverice-template
+  description: This is a sample currency converter service
+  contact:
+    name: John Doe
+    url: https://support.example.com
+    email: support@example.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+actions:
+  root:
+    help: test microservice 
+    http:
+      method: post
+      port: 8080
+      path: /
+      contentType: application/json
+    output:
+      type: string

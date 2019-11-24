@@ -4,15 +4,12 @@ import fs from "fs";
 import logger from "./logger";
 
 const env = path.join(__dirname, "../../.env");
-console.log(env);
+
 if (fs.existsSync(env)) {
   logger.debug("Using .env file to supply config environment variables");
   dotenv.config({ path: env });
 } else {
-  logger.debug(
-    "Using .env.example file to supply config environment variables"
-  );
-  dotenv.config({ path: ".env.example" }); // you can delete this after you create your own .env file!
+  logger.debug("Using process.env");
 }
 
 export const ENVIRONMENT = process.env.NODE_ENV;

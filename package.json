@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -r ts-node/register src/**/test.ts",
-    "start-dev": "babel-node ./src/service.ts --extensions '.ts'",
-    "secret": "babel-node ./src/util/secrets.ts --extensions '.ts'"
+    "start-dev": "babel-node ./src/index.ts --extensions '.ts'",
+    "build": "babel src --out-dir dist --extensions '.ts'",
+    "start": "node ./dist/index.js "
   },
   "author": "folarinshonibare",
   "license": "ISC",
